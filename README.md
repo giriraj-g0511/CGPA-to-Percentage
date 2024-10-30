@@ -5,7 +5,7 @@ Welcome to the **CGPA to Percentage Conversion** website! This tool helps studen
 
 ## 🌟 **Project Overview**
 
-The site provides easy-to-use CGPA-to-percentage conversion calculators for **11 top universities across Maharashtra**:
+The site provides easy-to-use CGPA-to-percentage conversion calculators for **10 top universities across Maharashtra**:
 
 1. **IIT Bombay** 🏛️ - Engineering, Science, and Technology
 2. **Institute of Chemical Technology, Mumbai** ⚗️ - Chemical Engineering and Technology
