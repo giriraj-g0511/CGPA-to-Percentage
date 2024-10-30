@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icon/UOM.png">
+    <title>CGPA Calculator for UOM</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            background-image: url("./Img/UOM.jpg"); /* Background image */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Result section at the top */
+        .result-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.2em;
+            z-index: 100;
+            display: none; /* Hidden by default */
+        }
+
+        .calculator-container {
+            width: 500px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+            color: black;
+            position: relative;
+            margin-top: 60px; /* Add top margin to accommodate the fixed result section */
+        }
+        
+        .calculator-container h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .calculator-container h2 {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 1.8em;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-section img {
+            max-width: 80px;
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #e65c52;
+        }
+
+        .formula-section {
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .refernce-pdf {
+            margin-top: 10px;
+            text-align: center;color: red;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed result section at the top -->
+    <div class="result-section" id="result-section">
+        <!-- Result will be displayed here -->
+    </div>
+
+    <div class="calculator-container">
+        <h3>CGPA Converter for</h3>
+        <h2>Savitribai Phule Pune University</h2>
+        <div class="logo-section">
+            <img src="./logo/UOM.jpeg" alt="University Logo"> <!-- Replace with your logo URL -->
+        </div>
+        <div class="form-group">
+            <label for="score">Enter CGPA:</label>
+            <input type="text" id="score" placeholder="Enter your CGPA">
+        </div>
+        <input type="button" value="Calculate" onclick="calculateResult()">
+
+        <!-- Section to display the formula used for calculation -->
+        <div class="formula-section">
+            <h3>Calculation Formula</h3>
+            <p>Equivalent Percentage = 7.1 × CGPA + 11</p>
+        </div>
+
+        <div class="refernce-pdf">
+            <p>Note: Refer this <a href="./PDF/UOM.pdf">PDF</a> for more details.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to handle the calculation
+        function calculateResult() {
+            const score = parseFloat(document.getElementById('score').value);
+
+            if (isNaN(score) || score < 0 || score > 10) {
+                document.getElementById('result-section').innerHTML = 
+                    "Please enter a valid CGPA score (0-10).";
+                document.getElementById('result-section').style.display = 'block';
+                return;
+            }
+
+            const cgpaPercentage = ((score * 7.1)+11).toFixed(2);
+            const resultText = `You entered a CGPA of: ${score.toFixed(2)}<br>Equivalent Percentage: ${cgpaPercentage}%`;
+
+            document.getElementById('result-section').innerHTML = resultText;
+            document.getElementById('result-section').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icon/index.png">
+    <title>CGPA to Percentage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("./bgImg/background.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            color: #05062f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            backdrop-filter: blur(2px);
+            color: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        li:hover {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .university-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #23395d;
+        }
+
+        .details {
+            margin-left: 15px;
+        }
+
+        .footer {
+            background-color: #333333; /* Smokey black color */
+            color: white;
+            padding: 20px 0;
+            min-height: 100px; /* Minimum height for the footer */
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between links */
+            margin-top: 10px;
+        }
+
+        .footer h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #777;
+            display: inline-block;
+        }
+
+        .footer a {
+            color: #b0bec5; /* Light grey color for links */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #b0bec5; /* Light grey color for the footer text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your University</h1>
+        <ul>
+            <li>
+                <a href="./IITM.html">
+                    <span class="university-name">IIT Bombay</span>
+                    <div class="details">- Engineering, Science, and Technology</div>
+                </a>
+            </li>
+            <li>
+                <a href="./ICTM.html">
+                    <span class="university-name">Institute of Chemical Technology, Mumbai</span>
+                    <div class="details">- Chemical Engineering and Technology</div>
+                </a>
+            </li>
+            <li>
+                <a href="./SPPU.html">
+                    <span class="university-name">Savitribai Phule Pune University</span>
+                    <div class="details">- Diverse Fields Including Science, Arts, and Commerce</div>
+                </a>
+            </li>
+            <li>
+                <a href="./DBATU.html">
+                    <span class="university-name">Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere</span>
+                    <div class="details">- Engineering, Technology, and Research</div>
+                </a>
+            </li>
+            <li>
+                <a href="./UOM.html">
+                    <span class="university-name">University of Mumbai</span>
+                    <div class="details">- Arts, Science, Commerce, Law, and Engineering</div>
+                </a>
+            </li>
+            <li>
+                <a href="./SIU.html">
+                    <span class="university-name">Symbiosis International (Deemed University)</span>
+                    <div class="details">- Management, Law, and Humanities</div>
+                </a>
+            </li>
+            <li>
+                <a href="./BAMU.html">
+                    <span class="university-name">Dr. Babasaheb Ambedkar Marathwada University</span>
+                    <div class="details">- Arts, Science, and Commerce</div>
+                </a>
+            </li>
+            <li>
+                <a href="./SUK.html">
+                    <span class="university-name">Shivaji University, Kolhapur</span>
+                    <div class="details">- Arts, Commerce, and Technology</div>
+                </a>
+            </li>
+            <li>
+                <a href="./BVDU.html">
+                    <span class="university-name">Bharati Vidyapeeth (Deemed University)</span>
+                    <div class="details">- Management, Medicine, and Engineering</div>
+                </a>
+            </li>
+            <li>
+                <a href="./MITU.html">
+                    <span class="university-name">MIT World Peace University, Pune</span>
+                    <div class="details">- Engineering, Management, and Liberal Arts</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Enhanced Footer with Inline Contact Links -->
+    <div class="footer">
+        <div class="footer-container">
+            <div>
+                <h3>Connect Me</h3>
+                <div class="footer-links">
+                    <a href="mailto:girirajguravwork@gmail.com">Email Us</a> |
+                    <a href="https://www.linkedin.com/in/giriraj-g0511/">LinkedIn</a> |
+                    <a href="https://github.com/giriraj-g0511">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CGPA to Percentage. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
